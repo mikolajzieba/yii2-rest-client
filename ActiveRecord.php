@@ -168,6 +168,7 @@ class ActiveRecord extends BaseActiveRecord {
 		}
 		foreach ($data as $name => $value) {
 			$this->setAttribute($name, $value);
+			$values[$name] = $value;
 		}
 
 		$changedAttributes = array_fill_keys(array_keys($values), null);
